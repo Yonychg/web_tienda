@@ -1,11 +1,20 @@
 
 import React from 'react'
 import Container from './Container'
+import Logo from './Logo'
+import HeaderMenu from './HeaderMenu'
 
 const Header = () => {
   return (
-    <header>
-        <Container className="bg-red-300 w-auto">Header</Container>
+    <header className='bg-white py-5 border-b border-b-black/30'>
+        <Container className='flex items-center justify-between'>
+          {/*Logo */}
+          <Logo/>
+          {/*NavButton*/}
+          <HeaderMenu/>
+          {/*NavAdmin*/}
+          <div>Otros</div>
+        </Container>
     </header>
     
   )
