@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button } from "@/components/ui/button"
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import Container from '@/components/Container'
+import Header from '@/app/ui/Header'
+import Footer from '@/app/ui/Footer'
+import Container from '@/app/ui/Container'
 
 const Home = () => {
   return (
@@ -15,7 +15,8 @@ const Home = () => {
          ab voluptatem? Tempore perspiciatis ex consectetur debitis nulla. Dolore!</p>
       <Button>Aceptar</Button>
       </Container>
-      <Footer/>          
+      <Footer/>
+                
     </div>
   )
 }
