@@ -1,12 +1,24 @@
 import React, { FC } from 'react'
-interface SitebarProps{
+import Logo from './Logo';
+import { X } from 'lucide-react';
+
+interface SidebarProps{
     isOpen:boolean;
-    onClose:()=> void;
+    onClose:() => void;
 }
 
-const SiteMenu:FC<SidebarProps> = ({isOpen,onClose}) => {
+const SiteMenu: FC<SidebarProps> = ({isOpen , onClose}) => {
   return (
-    <div className={`fixed inset-0 h-screen left-0 z-50 w-full bg-black/50 shadow-xl ${isOpen?"translate-x-0":"-translate-x-full"}`}>SiteMenu</div>
+    <div className={`fixed inset-0 h-screen left-0 z-50 w-full bg-black/50 text-white opacity-90 shadow-xl ${isOpen?"translate-x-0":"-translate-x-full"} hoverEffect`}>
+      <div className='min-w-72 max-w-96 bg-black h-screen p-10 border-r border-r-shop_light_green flex flex-col gap-6'>
+        <div className='flex items-center justify-between gap-5'>
+          <Logo className='text-white '></Logo>
+          <button onClick={onClose} className="hover:text-shop_light_green hoverEffect">
+            <X/>
+          </button>
+        </div>
+      </div>
+    </div>
   )
 }
 
